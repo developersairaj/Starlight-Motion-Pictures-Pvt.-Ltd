@@ -35,8 +35,10 @@ Starlight is a modern entertainment discovery android app designed to help users
 
 ---
 
+
 ## 📂 Project Structure
 
+```
 Starlight-Motion-Pictures-Pvt.-Ltd/
 │
 ├── gradle/                     # Gradle configuration files
@@ -51,7 +53,7 @@ Starlight-Motion-Pictures-Pvt.-Ltd/
 ├── local.properties            # Local environment configuration
 ├── libs.versions.toml          # Library version management
 └── README.md                   # Project documentation
-
+```
 ```
 
 ---
