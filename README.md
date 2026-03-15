@@ -2,7 +2,7 @@
 
 **By Tech Builder Team**
 
-Starlight is a modern entertainment discovery platform designed to help users explore movies, TV series, anime, dramas, and cartoons in one place. The platform provides ratings, platform availability, and detailed information about entertainment content to help users easily discover what to watch next.
+Starlight is a modern entertainment discovery android app designed to help users explore movies, TV series, anime, dramas, and cartoons in one place. The platform provides ratings, platform availability, and detailed information about entertainment content to help users easily discover what to watch next.
 
 ---
 
@@ -22,32 +22,36 @@ Starlight is a modern entertainment discovery platform designed to help users ex
 ## 🧠 Technologies Used
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
+- XML
 
 ### Backend & Services
+- Java
 - Supabase (Database & Authentication)
 - REST APIs
 
 ### APIs Used
 - TMDB API
 - OMDb API
-- Jikan API
 
 ---
 
 ## 📂 Project Structure
 
-```
-Starlight/
+Starlight-Motion-Pictures-Pvt.-Ltd/
 │
-├── index.html
-├── login-register.html
-├── css/
-├── js/
-├── assets/
-└── api/
+├── gradle/                     # Gradle configuration files
+│   └── wrapper/                # Gradle wrapper files
+│
+├── .gitignore                  # Files ignored by Git
+├── build.gradle.kts            # Project build configuration (Kotlin DSL)
+├── settings.gradle.kts         # Gradle project settings
+├── gradle.properties           # Gradle properties and configurations
+├── gradlew                     # Gradle wrapper script (Linux/Mac)
+├── gradlew.bat                 # Gradle wrapper script (Windows)
+├── local.properties            # Local environment configuration
+├── libs.versions.toml          # Library version management
+└── README.md                   # Project documentation
+
 ```
 
 ---
@@ -66,7 +70,7 @@ Open the project folder using **VS Code** or any code editor.
 
 ### 3️⃣ Run the Project
 
-Open `index.html` in your browser or run the project using **Live Server**.
+Open `Android Studio & Run The Project
 
 ---
 
