@@ -54,8 +54,6 @@ Starlight-Motion-Pictures-Pvt.-Ltd/
 ├── libs.versions.toml          # Library version management
 └── README.md                   # Project documentation
 ```
-```
-
 ---
 
 ## ⚙️ Getting Started
@@ -68,7 +66,7 @@ git clone https://github.com/developersairaj/Starlight-Motion-Pictures-Pvt.-Ltd.
 
 ### 2️⃣ Open the Project
 
-Open the project folder using **VS Code** or any code editor.
+Open the project folder using **Android Studio** or any code editor.
 
 ### 3️⃣ Run the Project
 
