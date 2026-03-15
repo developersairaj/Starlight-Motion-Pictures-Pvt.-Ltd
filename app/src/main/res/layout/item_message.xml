@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <!-- Avatar -->
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/bg_avatar_circle"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/tvMsgAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textColor="#FFB700"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"/>
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Name + time row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvMsgName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFB700"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"/>
+
+            <TextView
+                android:id="@+id/tvMsgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#302850"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <!-- Message bubble -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp"
+            app:cardBackgroundColor="#12102A"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/tvMsgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:maxWidth="260dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

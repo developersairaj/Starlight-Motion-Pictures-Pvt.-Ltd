@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Starlight"
+        parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/bg_deep</item>
+        <item name="colorPrimaryVariant">@color/bg_void</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="android:windowBackground">@color/bg_void</item>
+        <item name="android:statusBarColor">@color/bg_void</item>
+        <item name="android:navigationBarColor">@color/bg_void</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="actionBarStyle">@style/StarActionBar</item>
+        <item name="actionBarTheme">@style/StarActionBarTheme</item>
+    </style>
+
+    <style name="StarActionBar"
+        parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@color/bg_void</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="StarActionBarTheme"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/gold_blaze</item>
+    </style>
+
+    <style name="TabBtn"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/tab_text_selector</item>
+        <item name="android:backgroundTint">@color/tab_bg_selector</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cosmos">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_header"
+        android:elevation="32dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Brand Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STARLIGHT"
+                    android:textColor="#FFAA00"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.20"
+                    android:fontFamily="sans-serif-black"
+                    android:shadowColor="#CCAA5500"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="18"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinema  ·  Series  ·  Anime  ·  Universe"
+                    android:textColor="#28243A"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.12"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+            <!-- LIVE pill -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_live_badge"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&#9679; LIVE"
+                    android:textColor="#FF3355"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_search_cosmos"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="14dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Search"
+                android:alpha="0.4"/>
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search movies, shows, anime…"
+                android:textColor="#E8E0FF"
+                android:textColorHint="#28243A"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="6dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:autofillHints="no"
+                android:singleLine="true"/>
+
+            <ImageButton
+                android:id="@+id/btnImageSearch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_camera"
+                android:contentDescription="Search by image"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFAA00"/>
+
+            <ImageButton
+                android:id="@+id/btnClearSearch"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_close"
+                android:contentDescription="Clear"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#28243A"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Tabs — horizontally scrollable so all 7 fit -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:scrollbars="none"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:clipToPadding="false"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button android:id="@+id/btnTab1"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🔥 Trending"/>
+
+                <Button android:id="@+id/btnTab2"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🎬 Movies"/>
+
+                <Button android:id="@+id/btnTab3"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="📺 Series"/>
+
+                <Button android:id="@+id/btnTab4"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🎭 Drama"/>
+
+                <Button android:id="@+id/btnTab5"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🇰🇷 K-Drama"/>
+
+                <Button android:id="@+id/btnTab6"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🇨🇳 C-Drama"/>
+
+                <Button android:id="@+id/btnTab7"
+                    style="@style/TabBtn"
+                    android:layout_width="wrap_content"
+                    android:text="🎨 Cartoons"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!-- CONTENT -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:clipToPadding="false"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="true"/>
+
+            <!-- Empty state -->
+            <LinearLayout
+                android:id="@+id/layoutEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&#9733;"
+                    android:textColor="#1E1A2E"
+                    android:textSize="72sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nothing found"
+                    android:textColor="#302850"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cosmos"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero backdrop -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+            <ImageView
+                android:id="@+id/imgBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Backdrop"
+                android:background="#08071A"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#20000010"/>
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_left_fade"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/gradient_bottom_deep"/>
+
+        </FrameLayout>
+
+        <!-- Main info card — overlaps hero -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-60dp"
+            app:cardCornerRadius="26dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_glass"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvDetailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="1.15"
+                    android:fontFamily="sans-serif-black"
+                    android:shadowColor="#AA000000"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="10"/>
+
+                <!-- Rating row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_rating_gold"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★"
+                            android:textColor="#FFB700"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tvTmdbRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFB700"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:layout_marginStart="5dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvImdbRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFB700"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_badge_genre"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvDetailYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#302850"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.06"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDetailMeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#504870"
+                    android:textSize="12sp"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingMultiplier="1.6"/>
+
+                <TextView
+                    android:id="@+id/tvDirector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#504870"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvActors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#504870"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"/>
+
+                <!-- Streaming pill -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_stream_teal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▶"
+                        android:textColor="#00F5FF"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvStreaming"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#00D4E0"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+                <!-- Divider with glow -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFFFFF0A"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="22dp"/>
+
+                <!-- Overview label -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="20dp"
+                        android:background="#FFB700"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OVERVIEW"
+                        android:textColor="#FFB700"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.18"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#706890"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.9"/>
+
+                <!-- Trailer button -->
+                <LinearLayout
+                    android:id="@+id/btnTrailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_btn_gold"
+                    android:layout_marginTop="22dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▶  Watch Trailer"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.04"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:indeterminateTint="#FFB700"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Review card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="26dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_glass"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="20dp"
+                        android:background="#00D4E0"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YOUR REVIEW"
+                        android:textColor="#00D4E0"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.18"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="3.0"
+                    android:progressTint="#FFB700"
+                    android:secondaryProgressTint="#201C38"
+                    android:layout_marginBottom="18dp"/>
+
+                <EditText
+                    android:id="@+id/etReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:hint="Share your thoughts…"
+                    android:textColor="#C0B8E0"
+                    android:textColorHint="#302850"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_review_box"
+                    android:padding="16dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:autofillHints="no"
+                    android:lineSpacingMultiplier="1.6"
+                    android:layout_marginBottom="18dp"/>
+
+                <LinearLayout
+                    android:id="@+id/btnSubmitReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_btn_gold"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit Review"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.04"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSavedReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#00D4E0"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.7"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_stream_teal"
+                    android:padding="16dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

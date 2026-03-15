@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cosmos">
+
+    <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_header"
+        android:elevation="24dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="14dp">
+
+        <!-- Title + BMS button row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOW IN CINEMAS"
+                    android:textColor="#80FFB700"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.25"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎬 CINEMAS"
+                    android:textColor="#FFB700"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:shadowColor="#BBAA5500"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="14"/>
+
+            </LinearLayout>
+
+            <!-- BookMyShow header button -->
+            <LinearLayout
+                android:id="@+id/btnOpenBms"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_btn_gold"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎟️ BookMyShow"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- City label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select city for ticket prices:"
+            android:textColor="#C0B8E0"
+            android:textSize="11sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- City chips scroll -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:id="@+id/layoutCityChips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"/>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!-- ── Section label + spinner ───────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Movies in Cinemas Right Now"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"/>
+
+        <ProgressBar
+            android:id="@+id/progressCinema"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:indeterminateTint="#FFB700"/>
+
+    </LinearLayout>
+
+    <!--
+        ── FrameLayout holds both RV and empty state in the same space ───────
+        FIX: Using FrameLayout instead of two layout_weight siblings.
+        Two sibling Views with layout_weight in a LinearLayout split the screen —
+        one shows, the other takes half the space as invisible. FrameLayout
+        stacks them and we toggle visibility independently.
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Movie list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCinemaMovies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="4dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:visibility="gone"/>
+
+        <!-- Empty / error state -->
+        <LinearLayout
+            android:id="@+id/layoutCinemaEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎭"
+                android:textSize="52sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tvCinemaError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Could not load movies"
+                android:textColor="#504870"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"/>
+
+            <LinearLayout
+                android:id="@+id/btnCinemaRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_btn_gold"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Try Again"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Loading overlay (centred spinner while fetching) -->
+        <ProgressBar
+            android:id="@+id/progressCinemaCenter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="#FFB700"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+</LinearLayout>

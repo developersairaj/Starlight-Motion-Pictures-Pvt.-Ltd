@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Starlight</string>
+    <string name="search_hint">Search movies, shows, cartoons…</string>
+    <string name="tab_today">Trending</string>
+    <string name="tab_movies">Movies</string>
+    <string name="tab_shows">Shows</string>
+    <string name="tab_cartoons">Cartoons</string>
+    <string name="search_image">Search by image</string>
+    <string name="paste_image">Paste image</string>
+    <string name="clear_search">Clear</string>
+    <string name="content_desc_poster">Show poster</string>
+</resources>

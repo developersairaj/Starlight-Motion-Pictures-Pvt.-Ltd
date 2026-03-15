@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cosmos"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="60dp"
+        android:paddingBottom="50dp"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp">
+
+        <!-- Micro label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✦  YOUR PROFILE  ✦"
+            android:textColor="#302850"
+            android:textSize="9sp"
+            android:letterSpacing="0.22"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Avatar -->
+        <LinearLayout
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:background="@drawable/bg_avatar_circle"
+            android:elevation="12dp">
+
+            <TextView
+                android:id="@+id/tvAvatarLetter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#FFB700"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                android:shadowColor="#FFBB7700"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="16"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="18dp"
+            android:shadowColor="#AA000000"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="8"/>
+
+        <TextView
+            android:id="@+id/tvProfileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#403860"
+            android:textSize="13sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="36dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <!-- Info card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_glass"
+                android:padding="24dp">
+
+                <!-- Section label -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="#FFB700"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACCOUNT INFO"
+                        android:textColor="#FFB700"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.18"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFFFFF0A"
+                    android:layout_marginBottom="18dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Full Name"
+                        android:textColor="#403860"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:id="@+id/tvInfoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#C0B8E0"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email"
+                        android:textColor="#403860"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:id="@+id/tvInfoEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#C0B8E0"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Member badge -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_stream_teal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="✦  Starlight Member"
+                    android:textColor="#00D4E0"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:id="@+id/tvMemberSince"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#00D4E0"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Logout -->
+        <LinearLayout
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_logout_btn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGOUT"
+                android:textColor="#FF2D78"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.14"
+                android:fontFamily="sans-serif-black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

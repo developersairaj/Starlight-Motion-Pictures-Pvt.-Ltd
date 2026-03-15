@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03020A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Backdrop Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp">
+
+            <ImageView
+                android:id="@+id/imgAnimeBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Poster"/>
+
+            <!-- Gradient scrim over backdrop -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bottom_deep"/>
+
+            <!-- Progress bar over image -->
+            <ProgressBar
+                android:id="@+id/progressAnime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="#FFB700"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <!-- Content Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#0D0C1E">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvAnimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Score row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvAnimeScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB700"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvAnimeAgeRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AA80FF"
+                    android:textSize="12sp"
+                    android:layout_marginStart="16dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!-- ── Duration — NEW ── -->
+            <TextView
+                android:id="@+id/tvAnimeDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#00F5FF"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+            <!-- Episodes / Chapters -->
+            <TextView
+                android:id="@+id/tvAnimeEpisodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/tvAnimeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+            <!-- Genres -->
+            <TextView
+                android:id="@+id/tvAnimeGenres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+            <!-- Studio / Authors -->
+            <TextView
+                android:id="@+id/tvAnimeStudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"/>
+
+            <!-- Release date -->
+            <TextView
+                android:id="@+id/tvAnimeRelease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1A1830"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Synopsis header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📖 Synopsis"
+                android:textColor="#FFB700"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Synopsis -->
+            <TextView
+                android:id="@+id/tvAnimeSynopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Trailer button -->
+            <Button
+                android:id="@+id/btnAnimeTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="▶ Watch Trailer"
+                android:textColor="#000000"
+                android:background="@drawable/bg_btn_gold"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1A1830"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Where to Watch -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📱 Where to Watch"
+                android:textColor="#FFB700"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvAnimeStream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1A1830"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Review section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✍️ Your Review"
+                android:textColor="#FFB700"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <RatingBar
+                android:id="@+id/animeRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:progressTint="#FFB700"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etAnimeReview"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Write your thoughts…"
+                android:textColorHint="#5A6480"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_review_box"
+                android:padding="12dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btnAnimeSubmitReview"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Submit Review"
+                android:textColor="#000000"
+                android:background="@drawable/bg_submit_btn"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Saved review display -->
+            <TextView
+                android:id="@+id/tvAnimeSavedReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C0B8E0"
+                android:textSize="13sp"
+                android:padding="12dp"
+                android:background="@drawable/bg_review_box"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

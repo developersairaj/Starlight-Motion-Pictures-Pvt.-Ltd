@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Obsidian blacks — layered depth -->
+    <color name="bg_void">#000000</color>
+    <color name="bg_deep">#03020A</color>
+    <color name="bg_surface">#070612</color>
+    <color name="bg_card">#0D0C1E</color>
+    <color name="bg_card_raised">#12102A</color>
+
+    <!-- Aurora Gold — the hero color -->
+    <color name="gold_blaze">#FFB700</color>
+    <color name="gold_core">#F0A500</color>
+    <color name="gold_soft">#D4920A</color>
+    <color name="gold_dim">#4A3200</color>
+    <color name="gold_ghost">#160E00</color>
+
+    <!-- Aurora Cyan — electric accent -->
+    <color name="cyan_neon">#00F5FF</color>
+    <color name="cyan_core">#00D4E0</color>
+    <color name="cyan_dim">#004A52</color>
+    <color name="cyan_ghost">#001416</color>
+
+    <!-- Aurora Rose -->
+    <color name="rose_hot">#FF2D78</color>
+    <color name="rose_core">#E0205A</color>
+    <color name="rose_dim">#5A0820</color>
+    <color name="rose_ghost">#160008</color>
+
+    <!-- Aurora Violet -->
+    <color name="violet_bright">#AA80FF</color>
+    <color name="violet_core">#8050F0</color>
+    <color name="violet_dim">#280A60</color>
+    <color name="violet_ghost">#08021A</color>
+
+    <!-- Jade — anime accent -->
+    <color name="jade_bright">#00FFB0</color>
+    <color name="jade_core">#00D494</color>
+    <color name="jade_dim">#004A34</color>
+    <color name="jade_ghost">#001410</color>
+
+    <!-- Text hierarchy -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#C0B8E0</color>
+    <color name="text_tertiary">#504870</color>
+    <color name="text_ghost">#201C38</color>
+
+    <!-- Glass borders -->
+    <color name="glass_border">#FFFFFF14</color>
+    <color name="glass_border_gold">#FFB70030</color>
+    <color name="glass_border_cyan">#00F5FF20</color>
+
+    <!-- Status -->
+    <color name="live_pulse">#FF2D78</color>
+    <color name="bg_nav">#000000</color>
+</resources>
